@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Seating Chart Organizer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col bg-gray-50 items-center font-sans">
+
+  <h2 class="text-2xl font-bold mb-1">Classroom Seating Chart (CAS 106)</h2> 
+
+  <!-- Grid container -->
+  <div id="classroom" class="grid grid-cols-11"></div>
+
+  <!-- Legend -->
+  <div class="flex items-center justify-center gap-6 text-sm">
+    <div class="flex items-center gap-2">
+      <div class="w-5 h-5 border border-gray-400 rounded-md bg-white shadow-sm"></div>
+      <span class="text-gray-600">Unoccupied</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <div class="w-5 h-5 bg-green-500 rounded-md shadow-sm"></div>
+      <span class="text-gray-600">Occupied</span>
+    </div>
+  </div>
+
+  <!-- Input and buttons -->
+  <input id="studentName" type="text" placeholder="Enter student name"
+    class="mt-3 px-3 py-1.5 border border-gray-300 rounded-md shadow-sm text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+  <div class="mt-2 space-x-2 ">
+    <button onclick="setAssignMode()" class="mode-button text-sm px-4 py-1.5 border border-gray-300 rounded-md text-gray-700 ">Assign</button>
+    <button onclick="setTransferMode()" class="mode-button text-sm px-4 py-1.5 border border-gray-300 rounded-md text-gray-700 ">Transfer</button>
+    <button onclick="setSwapMode()" class="mode-button text-sm px-4 py-1.5 border border-gray-300 rounded-md text-gray-700 ">Swap</button>
+    <button onclick="setUnassignMode()" class="mode-button text-sm px-4 py-1.5 border border-gray-300 rounded-md text-gray-700 ">Unassign</button>
+  </div>
+  <script src="main.js" type="module"></script>
+</body>
+</html>
