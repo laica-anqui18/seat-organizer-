@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Student Seating Chart Organizer</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="flex flex-col bg-gray-50 items-center font-sans">
+<body class="flex flex-col bg-gray-50 items-center font-sans p-4">
 
-  <h2 class="text-2xl font-bold mb-1">Classroom Seating Chart (CAS 106)</h2> 
+  <h2 class="text-2xl font-bold mb-3">Classroom Seating Chart (CAS 106)</h2>
 
   <!-- Grid container -->
-  <div id="classroom" class="grid grid-cols-11"></div>
+  <div id="classroom" class="grid grid-cols-11 gap-0"></div>
 
   <!-- Legend -->
-  <div class="flex items-center justify-center gap-6 text-sm">
+  <div class="flex items-center justify-center gap-6 text-sm mt-4 mb-4">
     <div class="flex items-center gap-2">
       <div class="w-5 h-5 border border-gray-400 rounded-md bg-white shadow-sm"></div>
       <span class="text-gray-600">Unoccupied</span>
@@ -27,14 +27,15 @@
 
   <!-- Input and buttons -->
   <input id="studentName" type="text" placeholder="Enter student name"
-    class="mt-3 px-3 py-1.5 border border-gray-300 rounded-md shadow-sm text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+    class="px-3 py-1.5 border border-gray-300 rounded-md shadow-sm text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 mb-3 w-60" />
 
-  <div class="mt-2 space-x-2 ">
-    <button onclick="setAssignMode()" class="mode-button text-sm px-4 py-1.5 border border-gray-300 rounded-md text-gray-700 ">Assign</button>
-    <button onclick="setTransferMode()" class="mode-button text-sm px-4 py-1.5 border border-gray-300 rounded-md text-gray-700 ">Transfer</button>
-    <button onclick="setSwapMode()" class="mode-button text-sm px-4 py-1.5 border border-gray-300 rounded-md text-gray-700 ">Swap</button>
-    <button onclick="setUnassignMode()" class="mode-button text-sm px-4 py-1.5 border border-gray-300 rounded-md text-gray-700 ">Unassign</button>
+  <div class="space-x-2 mb-8">
+    <button class="mode-button assign text-sm px-4 py-1.5 border border-gray-300 rounded-md text-black cursor-pointer">Assign</button>
+    <button class="mode-button unassign text-sm px-4 py-1.5 border border-gray-300 rounded-md text-black cursor-pointer">Unassign</button>
+    <button class="mode-button transfer text-sm px-4 py-1.5 border border-gray-300 rounded-md text-black cursor-pointer">Transfer</button>
+    <button class="mode-button swap text-sm px-4 py-1.5 border border-gray-300 rounded-md text-black cursor-pointer">Swap</button>
   </div>
-  <script src="main.js" type="module"></script>
+
+  <script type="module" src="./main.js"></script>
 </body>
 </html>
