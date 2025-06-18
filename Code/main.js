@@ -9,3 +9,5 @@ document.querySelector('button.swap').addEventListener('click', () => setMode('s
 // Render the grid and set default mode on page load
 renderGrid();
 setMode('assign');
+
+console.log("hello");
