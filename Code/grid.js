@@ -1,6 +1,4 @@
-// -------------------------------
 // grid.js - Handles the classroom seat layout, seat interactions (assign/unassign/transfer/swap), and visual styling of the grid.
-// -------------------------------
 
 // Classroom layout as a 2D array:
 // 1 = seat exists
